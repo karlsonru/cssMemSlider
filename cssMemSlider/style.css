@@ -9,7 +9,7 @@ body {
 }
 
 .wrapper {
-    max-width: 75vw;
+    max-width: 65vw;
     overflow: hidden;
 
     position: absolute;
@@ -28,13 +28,9 @@ body {
     border: 2px solid white;
 
     width: 300vw;
-    height: 80vh;
+    height: 85vh;
 
     display: flex;
-    /*
-    flex-wrap: auto;
-    flex-direction: row;
-    */
 }
 
 .slide {
@@ -56,16 +52,35 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-
+/*
 .bar {
-    width: 10px;
-    height: 12px;
+    width: 3rem;
+    height: 2rem;
     opacity: .5;
     cursor: pointer;
-    background-color: orchid;
+    background-color: violet (131, 112, 130);
     transition: all 4s ease;
-    /*border-radius: 25%;*/
+    border-radius: 25%;
 }
+*/
+
+input[type="radio"]:checked ~ .navigation .labels .bar, 
+input[type="radio"]:not(:checked) ~ .navigation .labels .bar {
+    display: inline-block;
+    /*line-height: 1vh;*/
+    cursor: pointer;
+    width: 3vw;
+    height: 1vh;
+}
+
+input[type="radio"]:checked ~ .navigation .labels .bar:before, 
+input[type="radio"]:not(:checked) ~ .navigation .labels .bar:before {
+    content: "";
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    border-radius: 100%;
+}
+
 
 .bar:hover {
     opacity: 0.8;
@@ -86,7 +101,7 @@ div.navigation span.text {
 }
 
 #r1:checked ~ .navigation span.text::after {
-    content: "HEYHEY1";
+    content: "Мем #1";
     visibility: visible;
 } 
 
@@ -95,14 +110,24 @@ div.navigation span.text {
 }
 
 #r2:checked ~ .navigation .text::after {
-    content: "HEYHEY2";
+    content: "Мем #2";
     visibility: visible;
 } 
 
 #r3:checked ~ .slides #move{
     margin-left: -50%;
 }
+
+#r3:checked ~ .navigation .text::after {
+    content: "Мем #3";
+    visibility: visible;
+} 
+
 #r4:checked ~ .slides #move{
     margin-left: -75%;
 }
 
+#r4:checked ~ .navigation .text::after {
+    content: "Мем #4";
+    visibility: visible;
+} 
