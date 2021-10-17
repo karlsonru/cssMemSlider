@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-size: 100%;
 }
 
 body {
@@ -12,11 +13,9 @@ body {
     max-width: 65vw;
     overflow: hidden;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    margin: 0 auto;
 
-    transform: translate(-50%, -50%);
+    transform: translate(0, 5%);
 }
 
 .slider {
@@ -52,45 +51,27 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-/*
+
 .bar {
-    width: 3rem;
-    height: 2rem;
-    opacity: .5;
-    cursor: pointer;
-    background-color: violet (131, 112, 130);
-    transition: all 4s ease;
-    border-radius: 25%;
-}
-*/
-
-input[type="radio"]:checked ~ .navigation .labels .bar, 
-input[type="radio"]:not(:checked) ~ .navigation .labels .bar {
     display: inline-block;
-    /*line-height: 1vh;*/
     cursor: pointer;
-    width: 3vw;
-    height: 1vh;
+    width: 2vw;
+    height: 2vw;
+    border: 0.5em solid lightblue;
+    background-color: yellow;
+    border-radius: 50%;
 }
-
-input[type="radio"]:checked ~ .navigation .labels .bar:before, 
-input[type="radio"]:not(:checked) ~ .navigation .labels .bar:before {
-    content: "";
-    border: 1px solid #dddddd;
-    background-color: #ffffff;
-    border-radius: 100%;
-}
-
 
 .bar:hover {
     opacity: 0.8;
     transform: scale(1.5);
+    transition: all 2s ease;
+    background-color: red;
 }
 
 input[name="group"] {
     display: none;
 }
-
 
 div.navigation span.text {
     visibility: hidden;
