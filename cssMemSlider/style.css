@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-size: 100%;
+    font-weight: bold;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
 }
 
 .wrapper {
-    max-width: 65vw;
+    max-width: 80vw;
     overflow: hidden;
 
     margin: 0 auto;
@@ -18,16 +19,9 @@ body {
     transform: translate(0, 5%);
 }
 
-.slider {
-    height: 80vh;
-    border: 2px solid white;
-}
-
 .slides {
-    border: 2px solid white;
-
-    width: 300vw;
-    height: 85vh;
+    width: 320vw;
+    height: 90vh;
 
     display: flex;
 }
@@ -45,7 +39,6 @@ body {
 
 .navigation {
     height: 5vh;
-    border: 2px solid orange;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -81,6 +74,10 @@ div.navigation span.text {
     margin-left: 0;
 }
 
+#r1:checked ~ .navigation > .labels > #label1 {
+    background-color: red; 
+}
+
 #r1:checked ~ .navigation span.text::after {
     content: "Мем #1";
     visibility: visible;
@@ -93,7 +90,11 @@ div.navigation span.text {
 #r2:checked ~ .navigation .text::after {
     content: "Мем #2";
     visibility: visible;
-} 
+}
+
+#r2:checked ~ .navigation > .labels > #label2 {
+    background-color: red;
+}
 
 #r3:checked ~ .slides #move{
     margin-left: -50%;
@@ -102,7 +103,11 @@ div.navigation span.text {
 #r3:checked ~ .navigation .text::after {
     content: "Мем #3";
     visibility: visible;
-} 
+}
+
+#r3:checked ~ .navigation > .labels > #label3 {
+    background-color: red;
+}
 
 #r4:checked ~ .slides #move{
     margin-left: -75%;
@@ -112,3 +117,7 @@ div.navigation span.text {
     content: "Мем #4";
     visibility: visible;
 } 
+
+#r4:checked ~ .navigation > .labels > #label4 {
+    background-color: red;
+}
